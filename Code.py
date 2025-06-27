@@ -1,5 +1,5 @@
-import gc
-import socket
+import gc #Garbage collector interface it provides the ability to disable the collector, adjust the collection frequency, and set debugging options.
+import socket 
 import json
 import os
 from cryptography.fernet import Fernet
@@ -48,8 +48,8 @@ class Decoder:
             pass
 
     def clear_memory(self):
-        gc.collect()
-        print("Memory cleared.")
+        gc.collect() #With no arguments, performs a full collection. The optional generation argument must be an integer specifying which generation to collect (from 0 to 2). 
+        print("Memory cleared.") #Las generaciones están entre 0 y 2, 0 para objetos recientes, 1 para los que sobreviven la primera recolección, 2 para los más antiguos.
 def main():
     directory = 'dosyalar/'  # Replace with the target directory path
     server_host = '10.0.2.37'
